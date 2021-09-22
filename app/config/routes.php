@@ -13,12 +13,9 @@ $app->mount($usersCollection);
 // not found URLs
 $app->notFound(
   function () use ($app) {
-      $exception =
-        new HttpExceptions(
-          _('URI not found or error in request.'),
-          \App\Controllers\AbstractController::ERROR_NOT_FOUND,
-          new \Exception('URI not found: ' . $app->request->getMethod() . ' ' . $app->request->getURI())
-        );
-      throw $exception;
+    $exception = $exception = $app->request->getMethod().'-'.$app->request->getURI();
+    print_r($exception);
+    die();
+    
   }
 );

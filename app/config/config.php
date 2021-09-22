@@ -6,7 +6,7 @@ return(
             //"host"     => "192.168.0.10",
             "host"     => "localhost",
             "username" => "admin",
-            "password" => "12345",
+            "password" => "123456",
             "dbname"   => "PhalconTest",
         ],
 

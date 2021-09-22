@@ -33,12 +33,6 @@ try {
   // Setting up routing
   require BASE_PATH . '/app/config/routes.php';
 
-  // Making the correct answer after executing
-  $app->after(
-    function () use ($app) {
-      print_r("after");    
-    }
-  );
 
   // Processing request
   $request = new Request();
